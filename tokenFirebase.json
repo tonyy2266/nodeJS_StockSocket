@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+ "project_id": "ubercoach-b421e",
+ "private_key_id": "1898928d573c4581721b43802def88a682955229",
+ "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQCvuKBLa9ycXhqS\n/5ZqIkuQRCUznmpDcOFBukjrxk2wRpQhK4zHFpKxWyK5K/JhyilqjdTtA3nogZOi\nO2hrNUhHYA7vZFuHmM7Dk+sXC6cJHV60soJoeyjLGRUYTumJSetTybXbukybvuN8\n3fIHRjBDf7mrbzu+QB4j2CBwwMqIqPtYvNbiCcman9leVx+2bbAp7GlXkXDNj29S\nYRvU4i4w4fiOwXwlRXiKLr4kgedY3vaR1SgjHGMr5ie8B+Scrq+0g2pxbB/9Hw5F\nWRTKrQOz9nPPxcM/KETHRMGZekEwI1ux/8RLjHjTx1d5tDehaF4apGWBUmVWFT9e\nMKhn/eBRAgMBAAECggEAA8oOMNosWXXhClL3JiZDrWJ+z+BmZ7pnLSDsgiMWWUsI\nVjfHcyKeOrNdqhMTyL6QipLw6MSGrDghHCI+U/OD8cAVSl3GaIPnz4lgzDAs47It\nsOVZkRG41Tpe/VV0TUjaCYZDxO99R+2Dn9V0auo9T7NRKGx/ZBCjZb/7IRtTMsOy\n53Y8BpY8chnEJ0haOpIe8LSPgxyXCP5Hilf0USywrfls/3fbwzSo9xKYtRdxVw87\nO5wwcX6GPlhk2bztJVB6UEovwq8cxTnsI9mbkmqVq5Aufu/vfYYgyXtfzQev50QC\nnxotApkb2h8dq1y8IAI046M+PSipX/mdfcwGpDmDjQKBgQDrUHc9rI92vWo0Du/4\nfu/56eR16f7FhnLl4QLpzQ4EhDhUxsXvQr+VcGb/K6Q1aXGCDXfNP8GMLfDt8fFh\nbuBMFEoadfBoE6mXUFAhTRFe/DZ0+T3DROPSwm5yMioAYNaS+OrfsSXikiKAQMMD\nqEhz3vLTYypaEaP1f7L5vdQSRQKBgQC/KxJKwtuL0VoCaKBBodlePwjczJvtEBPh\nl3/b37RO3pf7vsU2A+me27pKawEHwFFHn1LiZRqsFbU/MyVXhnQFYheFK9N9hcuf\nTXpzgkoRd5tk2Frokn8UTYlovFEgKtaErvlt80Zl2X4dMVn/FKTBo989uRjG0OAQ\nPIA6u7S8nQKBgGhLfr4oGGIBa+vs3vFdmZFD2E1my9PSVmSKyVbE2rynuavheeMk\ny3M5oXzhY+OEe5mvzHR9GJS/2/QqctjDYsh1ia6WrVoDtPvqzckktllKIfzQZ05/\n3xYPtRIKJ9GJGjGD/93rTyZPrNj5WzXoxUwN+cQ1RJUtEmWCFtpYB4GdAoGAe+o+\nbCmMyD/G2YLaRlDUJowzgXQ7qlnemT9ryKlkJi+RUsSg7tdwauHBCpX7z/twdD2p\nK0kgFeXoW3Qaw3ZK5GZmGpOC/n1otPUy54bP3iyqlJ7Npq23JADyjeprp6886DrH\nQecMfd6SKfggfwDxnvdLMKY3kkA4zS16bRfZGt0CgYBAh8JXa8hAWeLsG4b9XvgU\nW2rQ+CymhHGYjvPFh1S+NOJjpM5T/8eMGCZdaR7902O2i+8ys5mLgkriLeW4Lyzv\nyTYUv3mwueF7aGj9n7az5ylf4xrZ78z31x8lck95JzBgKY1fshGvukIDr5M+Aalh\n3923ZFYKK1h6qNsYHBXPEw==\n-----END PRIVATE KEY-----\n",
+ "client_email": "firebase-adminsdk-7v5jd@ubercoach-b421e.iam.gserviceaccount.com",
+ "client_id": "110648521331257189142",
+ "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+ "token_uri": "https://oauth2.googleapis.com/token",
+ "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+ "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/firebase-adminsdk-7v5jd%40ubercoach-b421e.iam.gserviceaccount.com"
+}

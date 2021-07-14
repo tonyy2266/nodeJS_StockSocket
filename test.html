@@ -1,0 +1,210 @@
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js "></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.min.js"></script>
+<script>
+	var socket = io.connect('https://socket.hft.vn', { // https://socket.hft.vn http://localhost:3006 stock.pinetree.com.vn
+		query: {
+			token: '2417919a-debf-4cfa-9bca-1cce096a04aa'
+		},
+		path: '/stockSocketUAT'
+	});
+
+	socket.on('connect', function(){
+		// socket.emit('clientRequestInfoByStockCodes', { stockCode: 'ACB', date: '24-09-2019' });
+		socket.emit('clientRequestPortfolios', { date: '24-09-2019' });
+		// socket.emit('clientRequestWatchList', { date: '24-09-2019' });
+		// socket.emit('clientRequestAlertInfo', {});
+	});
+
+
+
+
+	// socket.on('serverSendInfoStock', function (data) {
+
+	// 	console.log(data);
+	// 	// $('#conversation').append('</b> ' + traddingData + '<br>');
+	// });
+
+	// socket.on('serverSendAlertInfo', function (data) {
+
+	// 	console.log(data);
+	// 	// $('#conversation').append('</b> ' + traddingData + '<br>');
+	// });
+
+	socket.on('serverSendPortfolios', function (data) {
+
+		console.log(data);
+		// $('#conversation').append('</b> ' + traddingData + '<br>');
+	});
+
+	// // socket.on('serverSendWatchList', function (data) {
+
+	// // 	console.log(data);
+	// // // $('#conversation').append('</b> ' + traddingData + '<br>');
+	// // });
+
+	// socket.on('serverSendMarketIndex', function(data) {
+	// 	console.log(data)
+	// })
+
+	// $.get("https://thamdo.vietstock.vn/tracnghiem/default.php?type=stock").success(function (data) {
+	// 	alert(data);
+	// 	doSomeStuffWithTheResult(data);
+	// })
+
+
+
+
+
+
+
+</script>
+<div style="float:left;width:100px;border-right:1px solid black;height:300px;padding:10px;overflow:scroll-y;">
+	<b>Thành viên</b>
+	<div id="users"></div>
+</div>
+<div style="float:left;width:300px;height:250px;overflow:scroll-y;padding:10px;" class="list">
+	<div id="conversation"></div>
+	<input id="data" style="width:200px;" />
+	<input type="button" id="datasend" value="send" />
+	<ul>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=76393&lang=vi' target='_blank'><span>1. Trắc
+					nghiệm - Cơ bản về TTCK - Đề số 1</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=84369&lang=vi' target='_blank'><span>2. Trắc
+					nghiệm - Cơ bản về TTCK - Đề số 2</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=11327&lang=vi' target='_blank'><span>3. Trắc
+					nghiệm - Cơ bản về TTCK - Đề số 3</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=86851&lang=vi' target='_blank'><span>4. Trắc
+					nghiệm - Cơ bản về TTCK - Đề số 4</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=65988&lang=vi' target='_blank'><span>5. Trắc
+					nghiệm - Cơ bản về TTCK - Đề số 5</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=16592&lang=vi' target='_blank'><span>6. Trắc
+					nghiệm - Cơ bản về TTCK - Đề số 6</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=57963&lang=vi' target='_blank'><span>7. Trắc
+					nghiệm - Cơ bản về TTCK - Đề số 7</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=47273&lang=vi' target='_blank'><span>8. Trắc
+					nghiệm - Cơ bản về TTCK - Đề số 8</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=46954&lang=vi' target='_blank'><span>9. Trắc
+					nghiệm - Cơ bản về TTCK - Đề số 9</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=97428&lang=vi' target='_blank'><span>10. Trắc
+					nghiệm - Cơ bản về TTCK - Đề số 10</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=39751&lang=vi' target='_blank'><span>11. Trắc
+					nghiệm - Cơ bản về TTCK - Đề số 11</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=87848&lang=vi' target='_blank'><span>12. Trắc
+					nghiệm - Cơ bản về TTCK - Đề số 12</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=41117&lang=vi' target='_blank'><span>13. Trắc
+					nghiệm - Cơ bản về TTCK - Đề số 13</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=98217&lang=vi' target='_blank'><span>14. Trắc
+					nghiệm - Cơ bản về TTCK - Đề số 14</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=62984&lang=vi' target='_blank'><span>15. Trắc
+					nghiệm - Cơ bản về TTCK - Đề số 15</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=82119&lang=vi' target='_blank'><span>16. Trắc
+					nghiệm - Cơ bản về TTCK - Đề số 16</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=74664&lang=vi' target='_blank'><span>17. Trắc
+					nghiệm - Cơ bản về TTCK - Đề số 17</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=58845&lang=vi' target='_blank'><span>18. Trắc
+					nghiệm - Cơ bản về TTCK - Đề số 18</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=25384&lang=vi' target='_blank'><span>19. Trắc
+					nghiệm - Cơ bản về TTCK - Đề số 19</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=48425&lang=vi' target='_blank'><span>20. Trắc
+					nghiệm - Cơ bản về TTCK - Đề số 20</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=59191&lang=vi' target='_blank'><span>21. Trắc
+					nghiệm - Cơ bản về TTCK - Đề số 21</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=55956&lang=vi' target='_blank'><span>22. Trắc
+					nghiệm - Cơ bản về TTCK - Đề số 22</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=82843&lang=vi' target='_blank'><span>23. Trắc
+					nghiệm - Cơ bản về TTCK - Đề số 23</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=69599&lang=vi' target='_blank'><span>24. Trắc
+					nghiệm - Cơ bản về TTCK - Đề số 24</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=17641&lang=vi' target='_blank'><span>25. Trắc
+					nghiệm - Cơ bản về TTCK - Đề số 25</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=19985&lang=vi' target='_blank'><span>26. Trắc
+					nghiệm - Cơ bản về TTCK - Đề số 26</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=69232&lang=vi' target='_blank'><span>27. Trắc
+					nghiệm - Môi giới chứng khoán - Đề số 1</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=97586&lang=vi' target='_blank'><span>28. Trắc
+					nghiệm - Môi giới chứng khoán - Đề số 2</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=77191&lang=vi' target='_blank'><span>29. Trắc
+					nghiệm - Môi giới chứng khoán - Đề số 3</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=61198&lang=vi' target='_blank'><span>30. Trắc
+					nghiệm - Môi giới chứng khoán - Đề số 4</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=43598&lang=vi' target='_blank'><span>31. Trắc
+					nghiệm - Môi giới chứng khoán - Đề số 5</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=56792&lang=vi' target='_blank'><span>32. Trắc
+					nghiệm - Phân tích và ĐTCK - Đề số 1</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=93471&lang=vi' target='_blank'><span>33. Trắc
+					nghiệm - Phân tích và ĐTCK - Đề số 2</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=82626&lang=vi' target='_blank'><span>34. Trắc
+					nghiệm - Phân tích và ĐTCK - Đề số 3</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=21344&lang=vi' target='_blank'><span>35. Trắc
+					nghiệm - Phân tích và ĐTCK - Đề số 4</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=48589&lang=vi' target='_blank'><span>36. Trắc
+					nghiệm - Phân tích và ĐTCK - Đề số 5</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=49948&lang=vi' target='_blank'><span>37. Trắc
+					nghiệm – Sát hạch QLQ – Phần MG và TVĐTCK - Phần 1</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=89135&lang=vi' target='_blank'><span>38. Trắc
+					nghiệm – Sát hạch QLQ – Phần MG và TVĐTCK - Phần 2</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=24929&lang=vi' target='_blank'><span>39. Trắc
+					nghiệm – Sát hạch QLQ – Phần MG và TVĐTCK - Phần 3</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=79877&lang=vi' target='_blank'><span>40. Trắc
+					nghiệm - Sát hạch QLQ - Phần Quản lý tài sản</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=34622&lang=vi' target='_blank'><span>41. Trắc
+					nghiệm – Sát hạch QLQ – Phần Tự Doanh</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=55126&lang=vi' target='_blank'><span>42. Trắc
+					nghiệm – Sát hạch chứng chỉ hành nghề - Đề số 1</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=63558&lang=vi' target='_blank'><span>43. Trắc
+					nghiệm – Sát hạch chứng chỉ hành nghề - Đề số 2</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=46764&lang=vi' target='_blank'><span>44. Trắc
+					nghiệm – Sát hạch chứng chỉ hành nghề - Đề số 3</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=25629&lang=vi' target='_blank'><span>45. Trắc
+					nghiệm – Luật Chứng khoán – Đề số 1</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=49655&lang=vi' target='_blank'><span>46. Trắc
+					nghiệm – Luật Chứng khoán – Đề số 2</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=45922&lang=vi' target='_blank'><span>47. Trắc
+					nghiệm – Luật Chứng khoán – Đề số 3</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=71879&lang=vi' target='_blank'><span>48. Trắc
+					nghiệm – Luật Chứng khoán – Đề số 4</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=42121&lang=vi' target='_blank'><span>49. Trắc
+					nghiệm - Cơ bản về TTCK - Đề số 27</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=46187&lang=vi' target='_blank'><span>50. Trắc
+					nghiệm - Cơ bản về TTCK - Đề số 28</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=34415&lang=vi' target='_blank'><span>51. Trắc
+					nghiệm - Phân tích và ĐTCK - Đề số 6</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=73757&lang=vi' target='_blank'><span>52. Trắc
+					nghiệm - Phân tích và ĐTCK - Đề số 7</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=91999&lang=vi' target='_blank'><span>53. Trắc
+					nghiệm - Phân tích và ĐTCK - Đề số 8</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=46911&lang=vi' target='_blank'><span>54. Trắc
+					nghiệm - Phân tích và ĐTCK - Đề số 9</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=75452&lang=vi' target='_blank'><span>55. Trắc
+					nghiệm - Cơ bản về TTCK - Đề số 27</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=31511&lang=vi' target='_blank'><span>56. Trắc
+					nghiệm - Cơ bản về TTCK - Đề số 28</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=94612&lang=vi' target='_blank'><span>57. Trắc
+					nghiệm - Cơ bản về TTCK - Đề số 29</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=79669&lang=vi' target='_blank'><span>58. Trắc
+					nghiệm - Cơ bản về TTCK - Đề số 30</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=81651&lang=vi' target='_blank'><span>59. Trắc
+					nghiệm - Cơ bản về TTCK - Đề số 31</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=32314&lang=vi' target='_blank'><span>60. Trắc
+					nghiệm - Cơ bản về TTCK - Đề số 32</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=56863&lang=vi' target='_blank'><span>61. Trắc
+					nghiệm - Cơ bản về TTCK - Đề số 33</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=46398&lang=vi' target='_blank'><span>62. Trắc
+					nghiệm - Cơ bản về TTCK - Đề số 34</span></a></li>
+		<li><a href='https://thamdo.vietstock.vn/tracnghiem/index.php?sid=95228&lang=vi' target='_blank'><span>63. Trắc
+					nghiệm - Cơ bản về TTCK - Đề số 35</span></a></li>
+	</ul>
+</div>
+<script>
+	$( document ).ready(function() {
+    	console.log( "ready!" );
+		$(".list").find("ul").find("li").find("a").each(function(index) {
+			// console.log( index + ": " + $( this ).attr("href") );
+			let data = $( this ).attr("href")
+			let x   = data.split("&")
+			let content = data.split("&")[0].split("=")[1]
+			// console.log(content)
+			$(this).attr("href","https://thamdo.vietstock.vn/tracnghiem/answers.php?sid=" + content)
+		})
+	})
+</script>
